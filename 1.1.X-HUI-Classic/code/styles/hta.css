@@ -80,6 +80,27 @@ TD INPUT{
 	padding: 1px 1px 0 1px;
 }
 
+FIELDSET{
+	border-color: #808080;
+	border-style: solid;
+	border-width: 1px;
+	font: normal 11px Arial;
+	margin: 0 0 5px 0;
+	padding: 5px;
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+LEGEND{
+	color: #316AC5;
+	font: 10px Tahoma;
+	text-align: left;
+	text-transform: uppercase;
+	text-decoration: overline;
+	margin-bottom: 4px;
+}
+
 optgroup {
 	font-weight: normal;
 }
@@ -174,6 +195,10 @@ optgroup {
 	font-weight: normal;
 	width: 100px;
 	height:100%;
+}
+
+.bg-line {
+	background: url(../../data/pics/bg_line.gif) repeat fixed center;
 }
 
 .cTable1{
@@ -423,21 +448,7 @@ optgroup {
 	padding-left: 10px;
 }
 
-#oDivMenuInfo{
-	background-color: #C1D2EE;
-	color: #316AC5;
-	font: 11px Tahoma;
-	padding: 2px;
-	text-align: center;
-	border-width: 1px 0 2px 0;
-	border-style: solid;
-	border-color: #316AC5;
-	margin-top:4px;
-	width: 100%;
-	position:relative;
-	height:100%;
-}
-	
+
 #oDivBody{
 	display: block;
 	position: relative;
@@ -450,7 +461,7 @@ optgroup {
 }
 
 #oDivLog, #oDivDebug{
-	display: none;
+	display: block;
 	position: relative;
 	left: 0;
 	top: 0;	

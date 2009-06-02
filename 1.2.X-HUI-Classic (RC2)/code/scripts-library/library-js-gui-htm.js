@@ -1157,7 +1157,7 @@ function htm_encode(sString,CipherVal){
 		// convert to hex to get the charactor
 	    var space = "\u0020"
 	    var alpha = "0123456789abcdefghijklmnopqrstuvwxyz._~ABCDEFGHIJKLMNOPQRSTUVWXYZ-+$\\";
-	    var CipherVal = parseInt(CipherVal)
+	    var CipherVal = typeof(CipherVal) == "number" ? parseInt(CipherVal) : (sString.length % 10)
 	    var sConvert = "", sChar
 	    for(var i = 0, len = sString.length; i < len; i++){
 	    	sChar = Cipher = sString.substring(i,i+1);

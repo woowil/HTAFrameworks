@@ -37,7 +37,7 @@ catch(ee){
 
 // AJAX
 // http://www.c-point.com/javascript_tutorial/Editor/ajax_tutorial.htm
-// My implementation of AJAX Woody Wilson
+// 
 
 var loader_current_file
 
@@ -100,7 +100,7 @@ function hta_loader_loadscripts(bLibOnly){
 	window.onerror = hta_loader_onerror;
 	try{
 		var sFile = oFso.GetSpecialFolder(2) + "\\hta_loader_loadscripts-" + Math.ceil(Math.random()*1000 + 1) + ".log"
-		var oRe = new RegExp("scripts-customer|scripts-mof|depicted|debug|ajax","ig") // folder or files to ignore
+		var oRe = new RegExp("\.svn|depicted|debug","ig") // folder or files to ignore
 		var oReMain = /.*(library-js_[1-2]\.js)/ig
 		var sDir = oFso.GetAbsolutePathName(".\\").replace(/(.+)\\$/,"$1")
 		var sPath = bLibOnly ? "code\\scripts-library" : "code"
@@ -149,7 +149,7 @@ function hta_loader_refresh(){
 		return;
 		for(var i = document.scripts.length-1; i >= 0; i--){
 			var a = (document.scripts)[i]
-			if(typeof(a.src) == "string" && (a.id).search(/ajax/ig) > -1){
+			if(typeof(a.src) == "string" && (a.id).search(/_loader_/ig) > -1){
 				hta_loader_removescript(a.id)
 				bOK = true
 			}

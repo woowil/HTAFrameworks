@@ -45,40 +45,6 @@ catch(e){
 	var oWno = new ActiveXObject("WScript.Network");
 }
 
-function hta_onload(){
-	var sDesc = ""
-	try{
-
-	}
-	catch(e){
-
-	}
-	finally{
-
-	}
-}
-
-
-function hta_whoami(){
-	try{
-		var sCmd = "%comspec% /c echo " + (new Date()).formatDateTime() + "; " + oWno.UserDomain + "; " + oWno.UserName + "; " + pmt.ouser.FullName + "; " + oWno.ComputerName + "; " + oWsh.CurrentDirectory + "; " + oPMT.release + ">>" + pmt.fls.whoami
-		oWsh.Run(sCmd,oReg.hide,false)
-	}
-	catch(e){
-		alert("ERROR::hta_whoami(): " + e.description)
-	}
-}
-
-function hta_onunload(){
-	try{
-		document.title = "..unloading"
-
-	}
-	catch(e){
-		alert("ERROR::hta_onunload(): " + e.description)
-	}
-}
-
 function hta_kill(){
 	try{
 		for(var i = 0, l = arguments.length; i < l; i++){
@@ -108,7 +74,7 @@ function hta_kill(){
 }
 
 function hta_reload(){
-	pmt.reload = true;
+	hta.reload = true;
 	//hta_onunload(); // will do this automatically
 	location.reload();
 }
@@ -140,41 +106,23 @@ function hta_refresh(){
 	}
 }
 
-function hta_position(iWidth,iHeight){
-	try{
-		//if(document.body) document.body.style.visibility = "hidden"
-		var iLeft = (window.screen.width-iWidth)/2;
-		var iTop = (window.screen.height-iHeight)/2;
-		window.moveTo(iLeft,iTop);
-		window.resizeTo(1,1);
-		window.resizeTo(iWidth,iHeight);
-		window.self.focus()
-		//if(document.body) document.body.style.visibility = "visible"
-		//document.recalc(true);
-	}
-	catch(e){
-		alert("ERROR::hta_position() " + e.description);
-	}
-}
 
-function hta_test(sOpt){
+function hta_JSFunctions(sOpt){
 	try{
-		if(sOpt == "getfunctions"){
-			if(!(f = window.prompt("Will get JS functions in files. Enter Jscript folder.",oFso.GetAbsolutePathName(".\\"))));
-			else if(f = io_file_listrec(f,"js")){
-				var oRe = new RegExp("function[ ]+([a-z0-9_]+)[ \s]*\(([a-z0-9_, ]*)\)","ig")
-				for(var i = 0, s=""; i < f.length; i++){
-					var oFile = oFso.OpenTextFile(f[i],oReg.read,false,oReg.TristateUseDefault);
-					ff = 0
-					while(!oFile.AtEndOfStream){
-						sLine = oFile.ReadLine();
-						if(sLine.match(oRe)) ff++
-					}
-        			oFile.Close();
-        			s += "\n"+oFso.GetBaseName(f[i]) + " functions=" + ff;
-        		}
-        		alert(s)
+		if(!(f = window.prompt("Will get JS functions in files. Enter Jscript folder.",oFso.GetAbsolutePathName(".\\"))));
+		else if(f = io_file_listrec(f,"js")){
+			var oRe = new RegExp("function[ ]+([a-z0-9_]+)[ \s]*\(([a-z0-9_, ]*)\)","ig")
+			for(var i = 0, s=""; i < f.length; i++){
+				var oFile = oFso.OpenTextFile(f[i],oReg.read,false,oReg.TristateUseDefault);
+				ff = 0
+				while(!oFile.AtEndOfStream){
+					sLine = oFile.ReadLine();
+					if(sLine.match(oRe)) ff++
+				}
+				oFile.Close();
+				s += "\n"+oFso.GetBaseName(f[i]) + " functions=" + ff;
 			}
+			return s;
 		}
 	}
 	catch(e){}

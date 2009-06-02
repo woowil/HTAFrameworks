@@ -80,6 +80,27 @@ TD INPUT{
 	padding: 1px 1px 0 1px;
 }
 
+FIELDSET{
+	border-color: #808080;
+	border-style: solid;
+	border-width: 1px;
+	font: normal 11px Arial;
+	margin: 0 0 5px 0;
+	padding: 5px;
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+LEGEND{
+	color: #316AC5;
+	font: 10px Tahoma;
+	text-align: left;
+	text-transform: uppercase;
+	text-decoration: overline;
+	margin-bottom: 4px;
+}
+
 optgroup {
 	font-weight: normal;
 }
@@ -450,7 +471,7 @@ optgroup {
 }
 
 #oDivLog, #oDivDebug{
-	display: none;
+	display: block;
 	position: relative;
 	left: 0;
 	top: 0;	
@@ -462,7 +483,7 @@ optgroup {
 }
 
 #oDivHome{
-	display: none;
+	display: block;
 	position: relative;
 	left: 0;
 	top: 0;
