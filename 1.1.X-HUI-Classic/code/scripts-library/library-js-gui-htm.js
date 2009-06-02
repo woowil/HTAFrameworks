@@ -31,7 +31,7 @@ basis. A failure to do so can result in loss of data or damage
 to systems.		
 
 
-Woodworth's 10 bud när du kodar en sajt i dynamisk html:
+Woody's 10 bud när du kodar en sajt i dynamisk html:
  1. Du skall koda så att sajten blir så generaliserad och dynamisk som möjligt. Helst utgå från en databas, "en" javascript fil och "en" style-sheet fil
  2. Du skall utgå från en struktur som underlättar administrativ arbete, användarvänlig utformning och utvecklaranpassad filosofi.
  3. Du skall skapa generaliserade funktioner och procedurer så att de är utbyggbara, dynamiska, smarta, genomtänkta och debugutformade.
