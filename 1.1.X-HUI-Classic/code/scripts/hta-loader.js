@@ -103,7 +103,7 @@ function hta_loader_loadscripts(bLibOnly){
 		var oRe = new RegExp("\.svn|depicted|debug","ig") // folder or files to ignore
 		var oReMain = /.*(library-js_[1-2]\.js)/ig
 		var sDir = oFso.GetAbsolutePathName(".\\").replace(/(.+)\\$/,"$1")
-		var sPath = bLibOnly ? "code\\scripts-library" : "code"
+		var sPath = bLibOnly ? "code\\HUI-1.1.X" : "code"
 		var sCmd = "%comspec% /c dir \"" + sDir + "\\" + sPath + "\\*.js*\" \"" + sDir + "\\" + sPath + "\\*.vb*\" /b /ON /s | find /i /v \"depicted\" | find /i /v \"-mof\" | find /i /v \"-customer\" | find /i /v \"ajax\">" + sFile
 		oWsh.Run(sCmd,0,true)
 
