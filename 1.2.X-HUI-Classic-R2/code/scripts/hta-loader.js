@@ -59,13 +59,13 @@ function hta_loader_onerror(m,u,l){
 	return true
 }
 
-function hta_loader_load(bLibOnly){
+function hta_loader_load(bLibOnly,sLibPath){
 	try{
 		String.prototype.isSearch = function(oRe){
 			return this.valueOf().search(oRe) > -1
 		}
 
-		hta_loader_loadscripts(bLibOnly)
+		hta_loader_loadscripts(bLibOnly,sLibPath)
 	}
 	catch(e){
 		//js_log_error(2,e);
@@ -75,6 +75,7 @@ function hta_loader_load(bLibOnly){
 
 function hta_loader_loadscript(sFile){
 	try{ // This function dynamically loads an external script file
+		
 		if(typeof sFile != "string" && sFile.length > 3) return;
 		loader_current_file = sFile = hta_loader_trim(sFile) // must do this!!
 		if(sFile.search(/.+\.(?:js|jse)$|.+\.(?:vbs|vbe)/ig) == -1) return;
@@ -96,17 +97,16 @@ function hta_loader_loadscript(sFile){
 	}
 }
 
-function hta_loader_loadscripts(bLibOnly){
+function hta_loader_loadscripts(bLibOnly,sLibPath){
 	window.onerror = hta_loader_onerror;
 	try{
 		var sFile = oFso.GetSpecialFolder(2) + "\\hta_loader_loadscripts-" + Math.ceil(Math.random()*1000 + 1) + ".log"
 		var oRe = new RegExp("scripts-customer|scripts-mof|depicted|debug|ajax","ig") // folder or files to ignore
 		var oReMain = /.*(library-js_[1-2]\.js)/ig
 		var sDir = oFso.GetAbsolutePathName(".\\").replace(/(.+)\\$/,"$1")
-		var sPath = bLibOnly ? "code\\scripts-library" : "code"
+		var sPath = bLibOnly ? "code\\" + sLibPath : "code"
 		var sCmd = "%comspec% /c dir \"" + sDir + "\\" + sPath + "\\*.js*\" \"" + sDir + "\\" + sPath + "\\*.vb*\" /b /ON /s | find /i /v \"depicted\" | find /i /v \"-mof\" | find /i /v \"-customer\" | find /i /v \"ajax\">" + sFile
 		oWsh.Run(sCmd,0,true)
-
 		var oFile = oFso.OpenTextFile(sFile,1,false,-2)
 		var a = (oFile.ReadAll()).split("\n")
 		oFile.close()
