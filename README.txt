@@ -1,13 +1,13 @@
 
 License = http://hui.codeplex.com/license
 
-[1.1.X]
+[HUI-Classic]
 nOsliw Solutions HUI Library, Classic version
 
-[1.2.X]
+[HUI-Classic-R2]
 nOsliw Solutions HUI Library, Classic version Release Candidate 2
 
-[2.X.X]
+[HUI-Professional]
 nOsliw Solutions HUI Library, Professional version
 
 
