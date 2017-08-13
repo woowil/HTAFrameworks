@@ -7,24 +7,24 @@
 * The programming languange is Microsoft JScript, JavaScript and HTA files
 * The ideal platform is Windows Server in a Windows domain enterprise environment
 
-[read more ..](https://msdn.microsoft.com/en-us/library/ms536496(v=vs.85).aspx) - What is HTA Application?
+[read more](https://msdn.microsoft.com/en-us/library/ms536496(v=vs.85).aspx) - What is HTA Application?
 
 ### nOsliw HUI Classic
 #### Description
-* nOsliw HUI Classic is a JScript/VBScripts package files and structure for HTAs
+* nOsliw HUI Classic is a Microsoft JScript/VBScripts package files and structure for HTAs
 * The scripts packages was developed from 2002-2007 while working in enterprise Windows infrastructure environments
-* The repository was converted from hui.codeplex.com to github in 2017-08
+* The project repository was converted from hui.codeplex.com/woowil to github.com/woowil in August of 2017
 
-[read more ..](./docs/hui-classic.md) - nOsliw HUI Classic Documentation
+[read more](./docs/hui-classic.md) - nOsliw HUI Classic Documentation
 
 ### nOsliw HUI Professional
 #### Description
-* nOsliw HUI Professional is a Microsoft JScripts library with its own AJAX framework alike structure for Windows
+* nOsliw HUI Professional is a Microsoft JScripts library package AJAX-alike framework structure for HTAs
 * The framework was developed 2006-2009 while working in enterprise Windows infrastructure environments
-* The repository was converted from hui.codeplex.com to github in 2017-08
-* The framework is used in [HTA Applications]https://github.com/woowil/HTAApplications) - MBA
+* The project repository was converted from hui.codeplex.com/woowil to github.com/woowil in August of 2017
+* The framework is used in github project [woowil/HTAApplications](https://github.com/woowil/HTAApplications)
 
-[read more ..](./docs/hui-professional.md) - nOsliw HUI Professional Documentation
+[read more](./docs/hui-professional.md) - nOsliw HUI Professional Documentation
 
 
 
