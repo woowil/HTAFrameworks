@@ -1,4 +1,4 @@
-// nOsliw Solutions HUI, HTML Application Library http://hui.nosliw.info, License http://hui.codeplex.com/license
+// nOsliw Solutions HUI, HTML Application Library https://github.com/woowil/HTAFrameworks
 //**Start Encode**
 
 // http://www.microsoft.com/technet/prodtechnol/windowsserver2003/library/TechRef/54094485-71f6-4be8-8ebf-faa45bc5db4c.mspx

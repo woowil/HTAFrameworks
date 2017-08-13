@@ -174,7 +174,7 @@ function htm_nav_url(iOpt,url,arg3,arg4){
 			}
 			case 4 : { // Opens a search Window
 				if(url && arg4){ // arg4: The html document 
-					top.location.href = url + "?doc=" + arg4; // url: http://www.ncr.no/psitis/  page: /document/link.html
+					top.location.href = url + "?doc=" + arg4; 
 				}
 				else htm_log_error(3,"Error opening window. The url or search-page argument are invalid.");
 				break;

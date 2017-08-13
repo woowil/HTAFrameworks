@@ -1,4 +1,4 @@
-// nOsliw Solutions HUI, HTML Application Library http://hui.nosliw.info, License http://hui.codeplex.com/license
+// nOsliw Solutions HUI, HTML Application Library https://github.com/woowil/HTAFrameworks
 //**Start Encode**
 
 var ie50 = isIE50(); // Private field

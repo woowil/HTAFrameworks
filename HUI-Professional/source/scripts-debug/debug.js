@@ -1,6 +1,6 @@
-// nOsliw HUI - HTML/HTA Application Framework Library (http://hui.codeplex.com/)
+// nOsliw HUI - HTML/HTA Application Framework Library (https://github.com/woowil/HTAFrameworks)
 // Copyright (c) 2003-2013, nOsliw Solutions,  All Rights Reserved.
-// License: GNU Library General Public License (LGPL) (http://hui.codeplex.com/license)
+
 //**Start Encode**
 
 
@@ -63,7 +63,7 @@ __H.register(__H.UI.Window.HTA,"Debug","nOsliw Debug",function Debug(){
 		try{		
 			oFormDebug.reset()
 			
-			__HXML.getXMLAJAX("http://hui.codeplex.com",this.ajaxUrl)
+			__HXML.getXMLAJAX("https://github.com/woowil/HTAFrameworks",this.ajaxUrl)
 			var oElements = __H.byTag("INPUT");
 			for(var i = oElements.length-1; i >= 0; i--){
 				oElement = oElements[i]

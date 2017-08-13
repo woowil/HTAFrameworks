@@ -1,6 +1,6 @@
-// nOsliw HUI - HTML/HTA Application Framework Library (http://hui.codeplex.com/)
+// nOsliw HUI - HTML/HTA Application Framework Library (https://github.com/woowil/HTAFrameworks)
 // Copyright (c) 2003-2013, nOsliw Solutions,  All Rights Reserved.
-// License: GNU Library General Public License (LGPL) (http://hui.codeplex.com/license)
+
 //**Start Encode**
 
 __H.include("HUI@Common.js")
