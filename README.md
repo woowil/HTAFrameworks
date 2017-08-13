@@ -4,7 +4,7 @@
 
 ### Introduction
 * HTML/HTA Application Framework for IT Professionals and advanced scripters in the Windows enterprise infrastructure
-* The programming languange is Microsoft JScript, JavaScript and HTA files
+* The programming languange is Microsoft JScript, JavaScript, DHTML and HTA files
 * The ideal platform is Windows Server in a Windows domain enterprise environment
 
 [read more](https://msdn.microsoft.com/en-us/library/ms536496(v=vs.85).aspx) - What is HTA Application?
@@ -24,6 +24,7 @@
 * The framework was developed 2006-2009 while working in enterprise Windows infrastructure environments
 * The project repository was converted from hui.codeplex.com/woowil to github.com/woowil in August of 2017
 * The framework is used in github project [github.com/woowil/HTAApplications](https://github.com/woowil/HTAApplications)
+* The framework also supports WSF (Windows Script Host) files
 * Updates and new versions of HUI Professional is discontinued for now
 
 [read more](./docs/hui-professional.md) - nOsliw HUI Professional Documentation
