@@ -1,0 +1,59 @@
+;http://www.scriptlogic.com/kixtart/FunctionLibrary_FunctionList.aspx
+
+Function ReplaceStr($TextString, $FindText, $ReplaceText, Optional $ReplaceAll)
+    ;Given a string ($TextString), $FindText is located and replaced with $ReplaceText.  If $ReplaceAll is -1 then all occurrences are replaced
+    Dim $TextLocation
+    
+    If $TextString = ""
+        $ReplaceStr = ""
+    Else
+        If $FindText = ""
+            $ReplaceStr = $TextString
+        Else
+            If $ReplaceAll = -1
+                $ReplaceStr = Join(Split($TextString, $FindText), $ReplaceText)
+            Else
+                $TextLocation = InStr($TextString, $FindText)
+                
+                $ReplaceStr = Left($TextString, $TextLocation - 1) + $ReplaceText + Right($TextString, Len($TextString) - $TextLocation - Len($FindText) + 1)
+            EndIf
+        EndIf
+    EndIf
+EndFunction
+
+Function CalcLogicalSubnet ($IP, $SNmask)
+   ; Version 2.0
+   ; This function calculates the logical subnet for a given IP address and subnet mask.
+   ; The $IP parameter can be padded with spaces as from @IPADDRESS0 or without
+   ; as from EnumIPinfo().
+   ;
+   ; Sets two exit codes that are passed to @Error
+   ; 1 = Improperly formatted IP address
+   ; 2 = Octet out range (0-255)
+
+   dim $IP, $SNmask
+   dim $i         ;Counter for looping through 4 octets of the IP and subnet mask
+   dim $arrayIP   ;Holds the string representation of the IP address octets.
+   dim $arraySN   ;Holds the string representation of the subnet mask octet.
+   dim $Subnet    ;Holds the string that becomes the logical subnet.
+   dim $x, $y     ;Holds value of IP and SNmask octet.
+
+   $arrayIP = split($IP, ".")
+   $arraySN = split($SNmask, ".")
+
+   If UBound($arrayIP) = 3 and UBound($arraySN) = 3
+      For $i=0 to 3
+         $x = Val(LTrim($arrayIP[$i]))
+         $y = Val(LTrim($arraySN[$i]))
+         If $x >= 0 and $x < 256 and $y >= 0 and $y < 256
+            $Subnet = "" + $Subnet + ($x & $y) + "."
+         Else
+            Exit(2)
+         Endif
+      Next
+      $CalcLogicalSubnet = substr($Subnet, 1, len($Subnet)-1)
+      Exit(0)
+   Else
+      Exit(1)
+   Endif
+EndFunction
