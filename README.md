@@ -1,14 +1,18 @@
 
-License = http://hui.codeplex.com/license
 
-[HUI-Classic]
-nOsliw Solutions HUI Library, Classic version
+## nOsliw HUI - HTML/HTA Application Framework
 
-[HUI-Classic-R2]
-nOsliw Solutions HUI Library, Classic version Release Candidate 2
+Description
+nOsliw HUI is a HTML/HTA Application JScript Framework for IT Professionals and advanced scripters in Windows enterprise networks. HUI is written in JScript/Javascript. The JS classes uses WSH, ADSI, WMI, FileSystem & other AJAX Frameworks.
 
-[HUI-Professional]
-nOsliw Solutions HUI Library, Professional version
+Introduction
+
+I'm an IT Professional Consultant that has been into Windows Scripting for many yearsthat's into scripting rather than compiled languages. Please ease up the time spent for upgrades and fixes by donating to Paypal to contribute stable releases.
+
+Purpose
+Develop a HTA framework for Windows enterprise environment
+
+
 
 
 
