@@ -1,16 +1,30 @@
 
 
-## nOsliw HUI - HTML/HTA Application Framework
+## HTA/HTML Application Framework
 
-Description
+### Description
 nOsliw HUI is a HTML/HTA Application JScript Framework for IT Professionals and advanced scripters in Windows enterprise networks. HUI is written in JScript/Javascript. The JS classes uses WSH, ADSI, WMI, FileSystem & other AJAX Frameworks.
 
-Introduction
+[]What is HTA Application](https://msdn.microsoft.com/en-us/library/ms536496(v=vs.85).aspx)
 
-I'm an IT Professional Consultant that has been into Windows Scripting for many yearsthat's into scripting rather than compiled languages. Please ease up the time spent for upgrades and fixes by donating to Paypal to contribute stable releases.
+## HTA Frameworks
+### nOsliw HUI Classic
+#### Description
+* nOsliw HUI Classic is a JScript/VBScripts package files and structure for HTAs
+* The scripts packages was developed from 2002-2007 while working in enterprise Windows infrastructure environments
+* The repository was converted from hui.codeplex.com to github in 2017-08
 
-Purpose
-Develop a HTA framework for Windows enterprise environment
+[Read more ..](./docs/hui-classic.md) - HUI Classic Documentation
+
+### nOsliw HUI Professional
+#### Description
+* nOsliw HUI Professional is a Microsoft JScripts library with its own AJAX framework alike structure for Windows
+* The framework was developed 2006-2009 while working in enterprise Windows infrastructure environments
+* The repository was converted from hui.codeplex.com to github in 2017-08
+* The framework is used in [HTA Applications]https://github.com/woowil/HTAApplications) - MBA
+
+[Read more ..](./docs/hui-professional.md) - HUI Classic Documentation
+
 
 
 
